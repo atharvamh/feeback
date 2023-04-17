@@ -1,8 +1,13 @@
 #root {
-  max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  place-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  min-height: 100vh;
 }
 
 .hello-banner{
@@ -22,4 +27,10 @@
   padding: 1.5em;
   background-color: #fff;
   border-radius: 0.5em;
+}
+
+@media only screen and (max-width : 500px){
+  .question-card{
+    transform: rotate(90deg);
+  }
 }

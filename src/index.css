@@ -20,10 +20,10 @@ a:hover {
 body {
   margin: 0;
   display: flex;
+  min-height: max-content;
   place-items: center;
-  min-height: 100vh;
   font-family: 'Rubik', 'Poppins', sans-serif;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 h1 {

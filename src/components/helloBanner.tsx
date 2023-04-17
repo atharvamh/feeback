@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Fade } from "@mui/material";
 
 interface IHelloBannerProps{
@@ -5,6 +6,20 @@ interface IHelloBannerProps{
 }
 
 export default function HelloBanner(props : IHelloBannerProps){
+
+    const [statement, setStatement] = useState<string>("");
+
+    useEffect(() => {
+        if(window.innerWidth <= 500){
+            setStatement("Please rotate your phone and Click here to get started")
+        }
+
+        else{
+            setStatement("Click here to get started")
+        }
+        
+    },[window.innerWidth])
+
     return (
         <div className="hello-banner">
             <Fade in={true} timeout={1000}>
@@ -15,7 +30,7 @@ export default function HelloBanner(props : IHelloBannerProps){
             </Fade>
             <Fade in={true} timeout={6000}>
                 <h3 onClick={() => props.setShowHelloBanner(false)} style={{ cursor : "pointer" }}>
-                    Click here to get started &#10148;
+                    { statement } &#10148;
                 </h3>
             </Fade>
         </div>

@@ -29,8 +29,6 @@
   border-radius: 0.5em;
 }
 
-@media only screen and (max-width : 500px){
-  .question-card{
-    transform: rotate(90deg);
-  }
+.slider{
+  padding: 1em;
 }

@@ -154,7 +154,7 @@ function ThankYouNote(props : ITQProps){
                 {
                     props.answers.map((item) => {
                         return (
-                            <li key={self.crypto.randomUUID()} style={{ fontSize: "20px", padding : "0.5em"}}>{item.key} - {item.value}</li>
+                            <li key={self.crypto.randomUUID()} style={{ fontSize: "16px", padding : "0.5em"}}>{item.key} - {item.value}</li>
                         )
                     })
                 }

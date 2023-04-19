@@ -21,7 +21,6 @@ body {
   margin: 0;
   display: flex;
   min-height: max-content;
-  place-items: center;
   font-family: 'Rubik', 'Poppins', sans-serif;
   overflow: hidden;
 }

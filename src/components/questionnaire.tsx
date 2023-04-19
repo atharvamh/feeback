@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Slider, Fade, FormControl, RadioGroup, FormControlLabel, Radio } from "@mui/material"
 import RacoonImage from "../assets/racoon.jpg";
-import AtharvaImage from "../assets/atharva.jpg";
+import AtharvaImage from "../assets/Atharva2.jpg"
 
 interface ISliderQProps{
     setAnswers: React.Dispatch<React.SetStateAction<any>>;
@@ -114,33 +114,27 @@ function DateQuestion(props : IDateQProps){
                 showRacoonImage ? 
                 <>
                     <h3>Would you like to go out again with this guy ?</h3>
-                    <Fade in={true} timeout={2000}>
-                        <img src={RacoonImage} alt="racoon" width={240} height={"auto"} style={{ borderRadius : "5%"}}></img>
-                    </Fade>
-                    <Fade in={true} timeout={6000}>
+                    <img src={RacoonImage} alt="racoon" width={240} height={"auto"} style={{ borderRadius : "5%"}}></img>
+                    <Fade in={true} timeout={4000}>
                         <p style={{ color : "red", fontWeight : "bold" }}>Oops! Wait...</p>
                     </Fade>
                 </>
                 : 
                 <>
                     <h3>Ohh yeah. This guy ? &#127881;&#x1F389;</h3>
-                    <Fade in={true} timeout={2000}>
-                        <>
-                            <img src={AtharvaImage} alt="atharva" width={240} height={"auto"} style={{ borderRadius : "3%"}}></img>
-                            <FormControl style={{ padding: "0.5rem 0rem"}}>
-                                <RadioGroup
-                                    aria-labelledby="demo-controlled-radio-buttons-group"
-                                    name="controlled-radio-buttons-group"
-                                    value={radioValue}
-                                    onChange={handleChange}
-                                >
-                                    <FormControlLabel value="Yes" control={<Radio />} label={<span>Definitely Yess &#129395;</span>} />
-                                    <FormControlLabel value="No" control={<Radio />} label={<span>No &#128542;</span>} />
-                                </RadioGroup>
-                            </FormControl>
-                            <span style={{ fontSize : "12px"}}>P.S : If your answer is No, Please send this guy a packet of tissues.</span>
-                        </>
-                    </Fade>
+                    <img src={AtharvaImage} alt="atharva" width={240} height={"auto"} style={{ borderRadius : "5%"}}></img>
+                    <FormControl style={{ padding: "0.5rem 0rem"}}>
+                        <RadioGroup
+                            aria-labelledby="demo-controlled-radio-buttons-group"
+                            name="controlled-radio-buttons-group"
+                            value={radioValue}
+                            onChange={handleChange}
+                        >
+                            <FormControlLabel value="Yes" control={<Radio />} label={<span>Definitely Yess &#129395;</span>} />
+                            <FormControlLabel value="No" control={<Radio />} label={<span>No &#128542;</span>} />
+                        </RadioGroup>
+                    </FormControl>
+                    <span style={{ fontSize : "12px"}}>P.S : If your answer is No, Please send this guy a packet of tissues.</span>
                     <h3 onClick={addAnswer} style={{ cursor : "pointer" }}>
                         Done &#9989;
                     </h3>

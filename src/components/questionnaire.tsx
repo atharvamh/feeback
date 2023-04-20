@@ -176,7 +176,7 @@ function PhoneQuestion(props : IQProps){
 
 function ThankYouNote(props : ITQProps){
     return (
-        <div className="hello-banner">
+        <div className="question-card" style={{ marginTop: "50%" }}>
             <h2>Thank You &#128522;. <br /> Dobby would like Prachi to please share a screenshot of this with Atharva.<br /></h2>
             <div>
                 <h3>Your Answers : </h3>
